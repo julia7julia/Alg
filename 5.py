@@ -4,15 +4,15 @@
 def removeOuterParentheses(s):
     count = 0
     res = ''
-    ind = 0
+    a = 0
     for i in range(len(s)):
         if s[i] == '(':
             count = count + 1
         elif s[i] == ')':
             count = count - 1
         if count == 0:
-            res = res + s[ind+1:i]
-            ind = i+1
+            res = res + s[a+1:i]
+            a = i+1
     return res
 
 s = '(()())(())'
